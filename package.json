@@ -1,0 +1,17 @@
+{
+  "name": "petr",
+  "version": "1.0.0",
+  "description": "petR Restful Api",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node --watch src/index.js",
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keyword": [],
+  "author": "Mark Corbin",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
