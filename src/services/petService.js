@@ -26,6 +26,14 @@ const createPet = (body) => {
     tricks,
   };
 
+  if (!Array.isArray(newPet.tricks)) {
+    err("400", "Tricks must be an array");
+  }
+
+  if (typeof newPet.name !== "string" || typeof newPet.type !== "string") {
+    err("400", "Name && Type must be a string");
+  }
+
   pets.push(newPet);
 
   return newPet;
@@ -58,7 +66,7 @@ const replacePet = (id, body) => {
 
   const { name, type, tricks } = body;
 
-  if (!name || !type || !tricks) {
+  if (!name || !type || !tricks || tricks.length === 0) {
     err("400", "Invalid name, type or tricks");
   }
 
@@ -68,6 +76,17 @@ const replacePet = (id, body) => {
     type,
     tricks,
   };
+
+  if (!Array.isArray(updatedPet.tricks)) {
+    err("400", "Tricks must be an array");
+  }
+
+  if (
+    typeof updatedPet.name !== "string" ||
+    typeof updatedPet.type !== "string"
+  ) {
+    err("400", "Name && Type must be a string");
+  }
 
   pets[petIndex] = updatedPet;
 
@@ -91,6 +110,17 @@ const updatePet = (id, body) => {
     ...(type && { type }),
     ...(tricks && { tricks }),
   };
+
+  if (!Array.isArray(updatedPet.tricks)) {
+    err("400", "Tricks must be an array");
+  }
+
+  if (
+    typeof updatedPet.name !== "string" ||
+    typeof updatedPet.type !== "string"
+  ) {
+    err("400", "Name && Type must be a string");
+  }
 
   pets[petIndex] = updatedPet;
 
