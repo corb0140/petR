@@ -21,13 +21,13 @@ const pets = [
     id: 4,
     name: "Eugene",
     type: "bearded dragon",
-    abilities: ["sunbathe", "lick"],
+    tricks: ["sunbathe", "lick"],
   },
   {
     id: 5,
     name: "Tumbleweed",
     type: "hamster",
-    abilities: ["spin", "gnaw", "solve maze"],
+    tricks: ["spin", "gnaw", "solve maze"],
   },
 ];
 
