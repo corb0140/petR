@@ -11,7 +11,7 @@ const err = (status, message) => {
 /* ---- CREATE A PET ---- */
 
 const createPet = (body) => {
-  const id = pets.length + 1;
+  const id = Date.now();
 
   const { name, type, tricks } = body;
 
