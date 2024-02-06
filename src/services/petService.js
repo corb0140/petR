@@ -49,7 +49,7 @@ const getOnePet = (id) => {
   const pet = pets.find((pet) => pet.id === id);
 
   if (!pet) {
-    err("404", "Pet not found");
+    err("404", `Pet with id ${id} not found`);
   }
 
   return pet;
@@ -136,7 +136,7 @@ const deletePet = (id) => {
     err("404", "Pet not found");
   }
 
-  const deletedPet = pets.splice(petIndex, 1);
+  const [deletedPet] = pets.splice(petIndex, 1);
 
   return deletedPet;
 };
